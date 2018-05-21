@@ -44,17 +44,9 @@ transform <- max(ggplot_df$ymax)
 xmin <- min(ggplot_df$x)
 xmax <- max(ggplot_df$x)
 
-# p + geom_line(aes_string(y = paste0('..y.. * ', transform), label = '..y..'), stat='ecdf') + 
-#     geom_vline(xintercept = 0, linetype = 'dashed') +
-#     scale_y_continuous(sec.axis = sec_axis(~./transform, name = "ecdf")) +
-#     scale_x_continuous(labels = scales::percent) +
-#     theme_light()
-
 plotly_text <- 'Cumulative Probability'
 
 p + geom_line(aes_string(y = paste0('..y.. * ', transform), text = 'plotly_text', label = '..y..'), stat='ecdf', size = 1.3) + # Add ecdf distribution
-    # geom_ribbon(aes_string(ymin = 0, ymax = paste0('..y.. * ', transform), label = '..y..'), stat='ecdf', 
-    #             alpha = .4, fill = 'steelblue2') + # area fill, doesn't work with plotly
     geom_vline(xintercept = 0, linetype = 'dashed') +
     scale_y_continuous(breaks = round(seq(0, transform, transform/4),0), # Main axis
                        minor_breaks = NULL,
@@ -68,22 +60,3 @@ p + geom_line(aes_string(y = paste0('..y.. * ', transform), text = 'plotly_text'
 
 
 ggplotly(tooltip = c('plotly_text', 'Effect', 'count','label'))
-
-
-# Equivalent to upper tailed t-test
-
-p_hat <- (a.success + b.success) / (a.success + a.failure + b.success + b.failure) # pooled p
-
-z_score <- abs((a.success / (a.success + a.failure)) - (b.success / (b.success + b.failure)) - 0) /
-    sqrt((p_hat)*(1 - p_hat)*(1/(a.success + a.failure) + 1/(a.success + a.failure))) 
-
-alpha = .05 
-z.alpha = qnorm(1-alpha) 
-z.alpha # rejection Z
-
-z_score # Test Z score
-
-pnorm(z_score, lower.tail = FALSE) # p-value of upper tail test
-
-# equivalent to our simulation
-1 - p.b_superior
