@@ -1,8 +1,10 @@
 ### Bayesian AB Testing
 
+Based on work at: https://www.countbayesie.com/blog/2015/4/25/bayesian-ab-testing
+
 Code repository that visualizes simulated beta distribution histogram and ecdf plots on the same chart via ggplot2 in R.
 
-Useful to contruct A/B tests in practice to measure simulated distributions and potential effect sizes.
+Useful to measure click-through rate like A/B tests to visualize distribution of possible effects, as well as the probability that the test CTR >= control CTR
 
 ### Example Plot Output
 
@@ -19,7 +21,5 @@ n2 = 125
 Soon.
 
 
-### Based on work at:
-https://www.countbayesie.com/blog/2015/4/25/bayesian-ab-testing
 
 
