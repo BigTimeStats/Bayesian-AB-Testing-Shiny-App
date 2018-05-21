@@ -6,7 +6,7 @@ Useful to contruct A/B tests in practice to measure simulated distributions and 
 
 ### Example Plot Output
 
-[Sample Plot](Rplot.png)
+![Sample Plot](Rplot.png)
 
 ### Shiny App
 
