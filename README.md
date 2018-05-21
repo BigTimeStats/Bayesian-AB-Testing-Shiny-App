@@ -1,8 +1,12 @@
-### AB_Testing_Bayes
+### Bayesian AB Testing
 
-Code that visualizes simulated beta distribution histogram and ecdf plots on the same chart via ggplot2 in R.
+Code repository that visualizes simulated beta distribution histogram and ecdf plots on the same chart via ggplot2 in R.
 
 Useful to contruct A/B tests in practice to measure simulated distributions and potential effect sizes.
+
+### Example Plot Output
+
+
 
 ### Shiny App
 
