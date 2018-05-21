@@ -8,20 +8,23 @@ library(scales)
 options(scipen = 999)
 
 n.trials <- 25000
+
+# Prior
 prior.alpha <- 1
 prior.beta <- 1
 
-a.success <- 134
-a.failure <- 50799 - a.success # Total views/impressions (denominator) minus success
+# Change inputs
+a.success <- 25
+a.failure <- 100 - a.success # Total views/impressions (denominator) minus success
 
-b.success <- 162
-b.failure <- 52935 - b.success
+b.success <- 35
+b.failure <- 100 - b.success
 
-# Sample from beta distribution based on results
+# Sample from beta distribution based on AB Test results
 a.samples <- rbeta(n.trials, a.success + prior.alpha, a.failure + prior.beta)
 b.samples <- rbeta(n.trials, b.success + prior.alpha, b.failure + prior.beta)
 
-# probability that b is superior to a
+# Probability that b is superior to a
 p.b_superior <- sum(b.samples > a.samples)/n.trials
 p.b_superior
 
