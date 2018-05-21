@@ -1,6 +1,6 @@
 ### Bayesian AB Testing
 
-Based on work at: https://www.countbayesie.com/blog/2015/4/25/bayesian-ab-testing
+Based on work at: <a href="https://www.countbayesie.com/blog/2015/4/25/bayesian-ab-testing" target="_blank">Count Bayesie Bayesian AB Testing</a>  
 
 Code repository that visualizes simulated beta distribution histogram and ecdf plots on the same chart via ggplot2 in R.
 
