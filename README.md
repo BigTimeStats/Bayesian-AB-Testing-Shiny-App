@@ -1,4 +1,4 @@
-### Bayesian AB Testing
+### Bayesian A/B Testing
 
 Code repository that visualizes simulated A/B Test Lift distribution and cumulative distribution on the same chart via ggplot2 in R.
 
