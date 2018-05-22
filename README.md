@@ -39,7 +39,7 @@ The shiny app takes all of the above, allows a user to input custom A/B test res
 
 1 - the Bayesian Probability is within range of the classically computed p-value, which is expected. The benefit of the app is to visualize possible outcomes probabilistically.
 
-One limitation of the ggplotly package in R (interactive plot) is that it does not have the capability to visualize a secondary axis. A user show hover over the line values to see the Cumulative Probability.
+One limitation of the ggplotly package in R (interactive plot) is that it does not have the capability to visualize a secondary axis. A user can hover over the line values to see the Cumulative Probability.
 
 
 
