@@ -4,7 +4,7 @@ library(ggthemes)
 library(dplyr)
 library(plotly)
 library(scales)
-
+ 
 options(scipen = 999)
 
 n.trials <- 25000
