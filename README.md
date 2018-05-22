@@ -26,7 +26,7 @@ The line intercept at 0 shows the probability that the test group will underperf
 
 A p-value can be derived from the line intercept at 0, or ~.065 above. This is interpreted as the probability that this result would occur by chance alone, given that the control CTR is true. 
 
-Classically, when a result is statistically significant (typically, p < .05), all we can say, as in Count Bayesie above, is that these 2 values are not likely the same (i.e. not from the same distribution). However, in a typical business setting, we want to know the effect size of our test, or how much better the test group will perform. The plotted distribution gives a business a more probabilistic view of that effect.
+Classically, a statistically significant result (typically, p < .05) tells us that 2 values are not likely the same (i.e. not from the same distribution). However, we may want to know how much better the test group will perform. The plotted distribution gives a probabilistic view of that lift.
 
 
 ### Shiny App
