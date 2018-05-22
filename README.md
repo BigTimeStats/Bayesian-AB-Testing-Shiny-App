@@ -20,9 +20,9 @@ Test Trials = 100
 
 The histogram shows the distribution of simulated Test CTR's / Control CTR's to visualize potential Test lift probabilistically.
 
-The line shows the cumulative distribution function of Test CTR / Control CTR. This can be used to quantify the probability of a certain effect size. For example, in the above plot, there is a 50% chance that the test group will exhibit a lift of 40% or more (the median effect, same as doing (.35 - .25) / .25).
+The line shows the cumulative distribution function of Test CTR / Control CTR. This can be used to quantify the probability of a certain effect size. For example, in the above plot, there is a 50% chance that the test group will exhibit a lift of 40% or more (the median effect, same as (.35 - .25) / .25).
 
-The line intercept at 0 shows the probability that the test group will underperform the control group, or ~ 6.5% above. 1 - .065 = 93.5%, or the probability that the test group will overperform the control group. 
+The line intercept at 0 shows the probability that the test group will underperform the control group, or ~ 6.5%. 1 - .065 = 93.5%, or the probability that the test group will overperform the control group. 
 
 A p-value can be derived from the line intercept at 0, or ~.065 above. This is interpreted as the probability that this result would occur by chance alone, given that the control CTR is true. 
 
@@ -37,7 +37,13 @@ https://bigtimestats.shinyapps.io/Bayesian-AB-Testing-App/
 
 The shiny app takes all of the above, allows a user to input custom A/B test results, adds the Bayesian Probability that Test > Control, and computes the p-value using a single tailed t-test (Classical Hypothesis Test).
 
-1 - the Bayesian Probability is within range of the classically computed p-value, which is expected. The benefit of the app is to visualize possible outcomes probabilistically.
+1 - the Bayesian Probability is within range of the classically computed p-value, which is expected. 
+
+Some benefits of the app:
+1. Visualize possible outcomes probabilistically.
+2. Not have to determine sample size ahead of time, nor wait for a test to be "statistically significant"
+3. Allow inputs of prior knowledge of the control/test distribution, which will adjust evidence needed to overturn control
+
 
 One limitation of the ggplotly package in R (interactive plot) is that it does not have the capability to visualize a secondary axis. A user can hover over the line values to see the Cumulative Probability.
 
