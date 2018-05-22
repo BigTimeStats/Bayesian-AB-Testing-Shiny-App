@@ -33,7 +33,7 @@ Classically, when a result is statistically significant (typically, p < .05), al
 
 https://bigtimestats.shinyapps.io/Bayesian-AB-Testing-App/
 
-![Shiny](ShinyApp.png)
+![Shiny](ShinyApp2.png)
 
 The shiny app takes all of the above, allows a user to input custom A/B test results, adds the Bayesian Probability that Test > Control, and computes the p-value using a single tailed t-test (Classical Hypothesis Test).
 
