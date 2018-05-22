@@ -35,7 +35,7 @@ https://bigtimestats.shinyapps.io/Bayesian-AB-Testing-App/
 
 ![Shiny](ShinyApp.png)
 
-The shiny app takes all of the above, allows a user to input custom A/B test results, and adds the Bayesian Probability that Test > Control and the p-value derived using a single tailed t-test.
+The shiny app takes all of the above, allows a user to input custom A/B test results, adds the Bayesian Probability that Test > Control, and computes the p-value using a single tailed t-test (Classical Hypothesis Test).
 
 1 - the Bayesian Probability is within range of the classically computed p-value, which is expected. The benefit of the app is to visualize possible outcomes probabilistically.
 
