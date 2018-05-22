@@ -18,7 +18,9 @@ n2 = 125
 
 ### Shiny App
 
-Soon.
+https://bigtimestats.shinyapps.io/Bayesian-AB-Testing-App/
+
+![Shiny](ShinyApp.png)
 
 
 
