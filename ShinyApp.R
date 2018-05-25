@@ -230,7 +230,9 @@ server <- function(input, output) {
     output$plotly <- renderPlotly({
             
         # ggplot base histogram
-        p1 <- ggplot(df(), aes(x = Lift)) + geom_histogram(fill = 'steelblue4', alpha = .6, bins = 30)
+        p1 <- ggplot(df(), aes(x = Lift)) + 
+            geom_histogram(fill = 'steelblue4', alpha = .6, bins = 30) + 
+            geom_vline(xintercept = 0, linetype = 'dashed')
         
         # Extract out ggplot data object for 2nd axis transformation
         ggplot_df <- ggplot_build(p1)$data[[1]]
@@ -247,7 +249,6 @@ server <- function(input, output) {
         plotly_text <- 'Cumulative Probability'
         
         p1 <- p1 + geom_line(aes_string(y = paste0('..y.. * ', transform), text = 'plotly_text', label = '..y..'), stat='ecdf', size = 1.3) + 
-            geom_vline(xintercept = 0, linetype = 'dashed') +
             geom_line(data = y_data, aes(x = x, y = y), linetype = 'dotted') + #, color = '#33CCFF') + # horizontal line
             geom_line(data = x_data, aes(x = x, y = y), linetype = 'dotted') + #, color = '#33CCFF') + # vert line
             scale_y_continuous(breaks = round(seq(0, transform, transform/4), 0), # Main axis
