@@ -1,6 +1,6 @@
 ### Bayesian A/B Testing
 
-Code repository that visualizes A/B Test results using a simulated beta distribution and ecdf on the same chart via ggplot2 in R.
+Code repository that visualizes A/B Test results running a simulation in R
 
 Useful to measure click-through rate A/B tests to visualize distribution of possible lift, as well as the probability that the test CTR > control CTR
 
