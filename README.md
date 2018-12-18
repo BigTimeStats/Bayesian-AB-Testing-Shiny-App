@@ -24,7 +24,7 @@ The line shows the cumulative distribution. This can be used to quantify the pro
 
 The line intercept at x = 0% shows the probability that the test group will underperform the control group, or ~ 6.5%. 1 - .065 = 93.5%, or the probability that the test group will overperform the control group. 
 
-A p-value can be derived from the line intercept at 0, or ~.065 above. This is the probability of observing at least as extreme test statistic (i.e. difference from control given the null hypothesis distribution), given that the control CTR is true.
+The app also computes an upper-tail p-value based on a t-test. This is the probability of observing at least as extreme test statistic (i.e. difference from control given the null hypothesis distribution), given that the control CTR is true.
 
 Classically, a statistically significant result (typically, p < .05) tells us that 2 values are not likely the same (i.e. not from the same distribution). However, we may want to know how much better the test group will perform. The plotted distribution gives a probabilistic view of that lift.
 
