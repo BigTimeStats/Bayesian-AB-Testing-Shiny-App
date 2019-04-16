@@ -16,7 +16,7 @@ Test CTR = 35%,
 
 Test Trials = 100
 
-![Sample Plot](Rplot.png)
+![Sample Plot](Images/Rplot.png)
 
 The histogram shows the distribution of simulated Test CTR's / Control CTR's to visualize potential Test lift.
 
@@ -33,7 +33,7 @@ Classically, a statistically significant result (typically, p < .05) tells us th
 
 https://bigtimestats.shinyapps.io/Bayesian-AB-Testing-App/
 
-![Shiny](ShinyApp2.png)
+![Shiny](Images/ShinyApp2.png)
 
 The shiny app takes all of the above, allows a user to input custom A/B test results, adds the Bayesian Probability that Test > Control, and computes the p-value using a single tailed t-test (Classical Hypothesis Test).
 
